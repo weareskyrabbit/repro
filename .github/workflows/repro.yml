@@ -1,0 +1,9 @@
+name: repro
+on: [push]
+jobs:
+  repro_on_ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v4
+      - run: echo hello, world!
