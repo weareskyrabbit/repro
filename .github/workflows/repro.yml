@@ -1,9 +1,19 @@
 name: repro
-on: [push]
+on:
+  push:
+    branches: 
+      - main
+  pull_request:
+    branches:
+      - main
 jobs:
-  repro_on_ubuntu:
+  repro-on-ubuntu:
+    name: cargo run on ubuntu
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Rust
     steps:
       - name: git checkout
         uses: actions/checkout@v4
-      - run: echo hello, world!
+      - run: cargo run

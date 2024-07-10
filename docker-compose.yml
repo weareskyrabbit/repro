@@ -1,0 +1,6 @@
+services:
+  repro:
+    build: ./Rust
+    volumes:
+      - ./Rust:/repro
+    tty: true
