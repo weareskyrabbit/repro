@@ -4,5 +4,5 @@
 ```
 /repro> docker compose build
 /repro> docker compose exec repro /bin/bash
-/repro# cargo run  
+/repro# cargo run
 ```
